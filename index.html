@@ -115,22 +115,21 @@
                         <th scope="row">Kampus</th>\
                         <td>' + (feature.properties['Kampus'] !== null ? autolinker.link(feature.properties['Kampus'].toLocaleString()) : '') + '</td>\
                     </tr>\
-                   
                     <tr>\
-                        <th scope="row">Rangking QS</th>\
-                        <td>' + (feature.properties['Desc_QS WUR'] !== null ? autolinker.link(feature.properties['Desc_QS WUR'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Foto Kampus</th>\
+                        <td>' + (feature.properties['Foto 1'] !== null ? '<img src="images/' + String(feature.properties['Foto 1']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Rangkin QS</th>\
+                        <td>' + (feature.properties['Deskripsi _QS WUR'] !== null ? autolinker.link(feature.properties['Deskripsi _QS WUR'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Tahun Didirikan</th>\
-                        <td>' + (feature.properties['Desc_Didirikan'] !== null ? autolinker.link(feature.properties['Desc_Didirikan'].toLocaleString()) : '') + '</td>\
+                        <td>' + (feature.properties['Deskripsi _Didirikan'] !== null ? autolinker.link(feature.properties['Deskripsi _Didirikan'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Fakultas</th>\
-                        <td>' + (feature.properties['Desc_Fakultas'] !== null ? autolinker.link(feature.properties['Desc_Fakultas'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                 <tr>\
-                        <th scope="row">Foto Kampus</th>\
-                        <td>' + (feature.properties['Foto 1'] !== null ? '<img src="images/' + String(feature.properties['Foto 1']).replace(/[\\\/:]/g, '_').trim() + '"' '+ 'class=popupimage' +' : '') + '</td>\
+                        <td>' + (feature.properties['Deskripsi _Fakultas'] !== null ? autolinker.link(feature.properties['Deskripsi _Fakultas'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -150,7 +149,7 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(142,224,124,1.0)',
+                fillColor: 'rgba(205,104,221,1.0)',
                 interactive: true,
             }
                     break;
@@ -166,7 +165,7 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(223,89,114,1.0)',
+                fillColor: 'rgba(230,19,47,1.0)',
                 interactive: true,
             }
                     break;
@@ -182,7 +181,7 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(20,235,196,1.0)',
+                fillColor: 'rgba(14,229,197,1.0)',
                 interactive: true,
             }
                     break;
@@ -198,7 +197,7 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(235,214,129,1.0)',
+                fillColor: 'rgba(44,207,15,1.0)',
                 interactive: true,
             }
                     break;
@@ -214,7 +213,7 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(110,131,226,1.0)',
+                fillColor: 'rgba(24,51,227,1.0)',
                 interactive: true,
             }
                     break;
@@ -250,8 +249,6 @@
         .className += ' fa fa-search';
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
-        var baseMaps = {};
-        L.control.layers(baseMaps,{'univ_surabaya<br /><table><tr><td style="text-align: center;"><img src="legend/univ_surabaya_1_ITS0.png" /></td><td>ITS</td></tr><tr><td style="text-align: center;"><img src="legend/univ_surabaya_1_UINSunanAmpel1.png" /></td><td>UIN Sunan Ampel</td></tr><tr><td style="text-align: center;"><img src="legend/univ_surabaya_1_UNAIR2.png" /></td><td>UNAIR</td></tr><tr><td style="text-align: center;"><img src="legend/univ_surabaya_1_UNESA3.png" /></td><td>UNESA</td></tr><tr><td style="text-align: center;"><img src="legend/univ_surabaya_1_UPNVJatim4.png" /></td><td>UPNV Jatim</td></tr></table>': layer_univ_surabaya_1,"Google Hybrid": layer_GoogleHybrid_0,}).addTo(map);
         setBounds();
         </script>
     </body>
